@@ -85,7 +85,7 @@ Paginate = 6
 #menu for footer
 
 [[menu.footer]]
-    name = "ক্রিকেট "
+    name = "ক্রিকেট"
     url = "/cricket/"
     weight = 1	
 
