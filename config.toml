@@ -48,35 +48,35 @@ Paginate = 6
 #nav main menu
 
 [[menu.main]]
-    name = "Stars"
-    url = "/Stars/"
+    name = "রাজনীতি"
+    url = "/politics/"
     weight = 1	
 
 [[menu.main]]
-    name = "Top 10"
-    url = "/Top10/"
+    name = "কলকাতা"
+    url = "/kolkata/"
     weight = 2
 
 [[menu.main]]
-    name = "Keywords"
-    url = "/Keywords/"
+    name = "পশ্চিমবঙ্গ"
+    url = "/west-bengal/"
     weight = 3
 	
 [[menu.main]]
-    name = "Indian"
-    url = "/Indian/"
+    name = "দেশ"
+    url = "/india/"
     weight = 4
 
 [[menu.main]]
-    name = "Videos"
-    url = "/Videos/"
+    name = "বিশ্ব"
+    url = "/world/"
     weight = 5
 
 
 
 [[menu.main]]
-    name = "Photos"
-    url = "/Photos/"
+    name = "বিনোদন"
+    url = "/entertainment/"
     weight = 6
 
 
@@ -85,33 +85,53 @@ Paginate = 6
 #menu for footer
 
 [[menu.footer]]
-    name = "Stars"
-    url = "/Stars/"
+    name = "ক্রিকেট "
+    url = "/cricket/"
     weight = 1	
 
 [[menu.footer]]
-    name = "Top 10"
-    url = "/Top10/"
+    name = "খেলা"
+    url = "/sports/"
     weight = 2
 
 [[menu.footer]]
-    name = "Keywords"
-    url = "/Keywords/"
+    name = "ব্যবসা"
+    url = "/business/"
     weight = 3
 	
 [[menu.footer]]
-    name = "Indian"
-    url = "/Indian/"
+    name = "স্বাস্থ্য"
+    url = "/health/"
     weight = 4
 
 [[menu.footer]]
-    name = "Videos"
-    url = "/Videos/"
+    name = "লাইফস্টাইল"
+    url = "/lifstyle/"
     weight = 5
 
 
 
 [[menu.footer]]
-    name = "Photos"
-    url = "/Photos/"
+    name = "ফটো গ্যালারি"
+    url = "/photos/"
     weight = 6
+	
+[[menu.footer]]
+    name = "রাশিফল"
+    url = "/horoscope/"
+    weight = 7
+	
+[[menu.footer]]
+    name = "কর্মখালি"
+    url = "/jobs/"
+    weight = 8
+	
+[[menu.footer]]
+    name = "সরকারি প্রকল্প"
+    url = "/government-schemes/"
+    weight = 9
+	
+[[menu.footer]]
+    name = "ওয়েব স্টোরি"
+    url = "/web-stories/"
+    weight = 10

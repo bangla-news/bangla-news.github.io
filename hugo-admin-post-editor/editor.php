@@ -70,8 +70,10 @@
     <textarea  id="post-description" placeholder="Excerpt: meta tag description, Important for seo!!!" rows="2" required><?php echo $description; ?></textarea>
 	<div >Characters left: <span id="char-counter" class="char-counter">170</span></div><br/>
 
-    <label for="post-tags">Tags (comma-separated):<red></label>
-    <input type="text" id="post-tags" size="122px" value="<?php echo $tags; ?>" placeholder="At least add main tags i.e pornstar, video, photos, indian" required>
+    <!--label for="post-tags">Tags (comma-separated):<red></label>
+    <input type="text" id="post-tags" size="122px" value="<?php echo $tags; ?>" placeholder="At least add main tags i.e pornstar, video, photos, indian" required-->
+	
+	<?php require_once('tag-suggestion-bangla-news.php'); ?>
 	
 	
 	<label for="post-video-thumbnail">Video Poster:</label>
@@ -110,12 +112,7 @@
 	    var postSlugEditLock = false;
 		
 		var ckeditor = CKEDITOR.replace( 'post-body', {
-			height: 600,
-			entities: false,
-			startupMode: 'source',
-			allowedContent: true,
-			extraAllowedContent: 'span',
-			
+			height: 600
 		});
 		
         //DOMContentLoaded is used to load the ckeditor first and then do other things.	
@@ -146,7 +143,7 @@
 
                        						
 						//load a blank post (New Post)
-						CKEDITOR.instances['post-body'].setData('<h1 class="mb-4">Post Title</h1><p class="lead">A brief excerpt or summary of your post goes here.</p><div class="row mt-4"><div classs="col-md-8"><h2>Image Title</h2><img src="<?php echo $adminSrcDir; ?>/assets/<?php echo $adminSrcDir; ?>-sample.jpg" alt="Image" class="img-fluid mb-3"><p class="text-muted">Image Label</p></div></div>');
+						CKEDITOR.instances['post-body'].setData('<div style="text-align: center;"><a class="btn btn-dark" href="https://md-imtiaj.github.io/freeware/">Download</a></div>');
                     });
             }
 
