@@ -48,8 +48,8 @@ Paginate = 6
 #nav main menu
 
 [[menu.main]]
-    name = "Porn Stars"
-    url = "/PornStars/"
+    name = "Stars"
+    url = "/Stars/"
     weight = 1	
 
 [[menu.main]]
@@ -59,7 +59,7 @@ Paginate = 6
 
 [[menu.main]]
     name = "Keywords"
-    url = "/PornKeywords/"
+    url = "/Keywords/"
     weight = 3
 	
 [[menu.main]]
@@ -85,8 +85,8 @@ Paginate = 6
 #menu for footer
 
 [[menu.footer]]
-    name = "Porn Stars"
-    url = "/PornStars/"
+    name = "Stars"
+    url = "/Stars/"
     weight = 1	
 
 [[menu.footer]]
@@ -96,7 +96,7 @@ Paginate = 6
 
 [[menu.footer]]
     name = "Keywords"
-    url = "/PornKeywords/"
+    url = "/Keywords/"
     weight = 3
 	
 [[menu.footer]]
