@@ -112,8 +112,9 @@ function savePostContent($postSlug, $title, $tags, $video_thumbnail, $video_url,
 	}
     $postFile = $hugoContentDir . $postSlug . '.html';
 	
+	//not backing up the posts for this news site
 	//do a backup
-	file_put_contents($backupDir . $postSlug . '.html', @file_get_contents($postFile));
+	//file_put_contents($backupDir . $postSlug . '.html', @file_get_contents($postFile));
 
     $content = "---\n";
     

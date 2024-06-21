@@ -18,6 +18,18 @@ Paginate = 6
 [minify]
   minifyOutput = false
   
+  
+[outputs]
+  home = ["HTML", "AMP"]
+
+[outputFormats]
+  [outputFormats.AMP]
+    mediaType = "text/html"
+    baseName = "amp"
+    path = "amp"
+    isHTML = true
+    permalinkable = true
+  
 [params]
     showRelatedPosts = true #for lightbi related posts
     description = "Bangla News"
@@ -40,8 +52,29 @@ Paginate = 6
 	darkMode = false
 
   [params.mytags]
-	go = 'Go is developed by google.'
+	politics = 'Go is developed by google.'
 	php = 'PHP is the most populer language for web developemnt.'
+    
+  [params.tag_translations]
+    politics = "রাজনীতি"
+    kolkata = "কলকাতা"
+    west-bengal = "পশ্চিমবঙ্গ"
+    india = "দেশ"
+    world = "বিশ্ব"
+    cricket = "ক্রিকেট"
+    technology = "প্রযুক্তি"
+    sports = "খেলা"
+    business = "ব্যবসা"
+    entertainment = "বিনোদন"
+    health = "স্বাস্থ্য"
+    lifstyle = "লাইফস্টাইল"
+    photos = "ফটো গ্যালারি"
+    horoscope = "রাশিফল"
+    jobs = "কর্মখালি"
+    government-schemes = "সরকারি প্রকল্প"
+    web-stories = "ওয়েব স্টোরি"
+    
+    # Add more tags as needed
 
 #
 
@@ -130,8 +163,14 @@ Paginate = 6
     name = "সরকারি প্রকল্প"
     url = "/government-schemes/"
     weight = 9
+
 	
+[[menu.footer]]
+    name = "প্রযুক্তি"
+    url = "/technology/"
+    weight = 10
+    
 [[menu.footer]]
     name = "ওয়েব স্টোরি"
     url = "/web-stories/"
-    weight = 10
+    weight = 11

@@ -70,9 +70,12 @@
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
       {{ if .Params.tags }}
       <div class="blog-tags">
-        {{ range .Params.tags }}
-        <a href="{{ $.Site.LanguagePrefix | absURL }}{{ . | urlize }}/">{{ . }}</a>
-        {{ end }}
+        {{ $tagTranslations := .Site.Params.tag_translations }}
+		{{ range .Params.tags }}
+			{{ $tag := . }}
+			{{ $translatedTag := index $tagTranslations $tag | default $tag }}
+			<a href="{{ $.Site.LanguagePrefix | absURL }}{{ $tag | urlize }}/">{{ $translatedTag }}</a>
+		{{ end }}
       </div>
       {{ end }}
 	  

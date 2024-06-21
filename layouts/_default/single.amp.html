@@ -1,0 +1,28 @@
+{{ define "main" }}
+<amp-story standalone title="{{ .Title }}" publisher="My News Site" publisher-logo-src="/images/logo.png" >
+  {{ $rawContent := .RawContent }}
+  {{ $slides := split $rawContent "## Slide" }}
+  {{ range $index, $slide := $slides }}
+    {{ if ne $index 0 }}
+    {{ $lines := split $slide "\n" }}
+    {{ $title := index $lines 0 | markdownify | plainify }}
+    {{ $subheading := index $lines 2 | markdownify | plainify }}
+    {{ $imgSrc := "" }}
+    {{ $imgMatch := findRE "!\\[.*\\]\\((.*)\\)" $slide }}
+    {{ if gt (len $imgMatch) 0 }}
+      {{ $imgSrc = replaceRE "^!\\[.*\\]\\((.*)\\)$" "$1" (index $imgMatch 0) }}
+    {{ end }}
+    <amp-story-page id="page-{{ $index }}" auto-advance-after="7s" class="i-amphtml-layout-container" i-amphtml-layout="container">
+      <amp-story-grid-layer template="vertical" aspect-ratio="412:618" class="grid-layer i-amphtml-layout-container" i-amphtml-layout="container">
+
+        <amp-img src="{{ $imgSrc }}" width="720" height="1280" layout="responsive"></amp-img>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical">
+        <h1>{{ $title }}</h1>
+        <p>{{ $subheading }}</p>
+      </amp-story-grid-layer>
+    </amp-story-page>
+    {{ end }}
+  {{ end }}
+</amp-story>
+{{ end }}

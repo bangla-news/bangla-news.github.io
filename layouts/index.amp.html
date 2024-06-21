@@ -1,0 +1,15 @@
+{{ define "main" }}
+<amp-story standalone title="{{ .Title }}" publisher="My AMP Stories" publisher-logo-src="https://example.com/logo.png">
+  {{ range .Site.RegularPages }}
+  <amp-story-page id="page-{{ .File.BaseFileName }}">
+    <amp-story-grid-layer template="fill">
+      <amp-img src="{{ .Params.image }}" width="720" height="1280" layout="responsive"></amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="vertical">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Summary }}</p>
+    </amp-story-grid-layer>
+  </amp-story-page>
+  {{ end }}
+</amp-story>
+{{ end }}
