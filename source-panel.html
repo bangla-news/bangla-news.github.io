@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Panel</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        #sidebar {
+            width: 250px;
+            padding: 10px;
+            border-right: 2px solid #ccc;
+            overflow-y: auto;
+            height: 100vh;
+            transition: width 0.3s ease;
+        }
+        #sidebar.shrink {
+            width: 0;
+            padding: 0;
+            border-right: none;
+        }
+        #content {
+            flex-grow: 1;
+            padding: 0px;
+            transition: margin-left 0.3s ease;
+        }
+        #content.expanded {
+            margin-left: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            display: block;
+            margin-bottom: 5px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        #toggleButton {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 7px;
+            cursor: pointer;
+            transition: left 0.3s ease;
+        }
+        #toggleButton.hidden {
+            left: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h3>Indian Bangla News</h3>
+        <a href="https://bangla.hindustantimes.com/" target="contentFrame">Hindustan Times Bangla</a>
+        <a href="https://bengali.news18.com/" target="contentFrame">News18 Bengali</a>
+        <a href="https://tv9bangla.com/" target="contentFrame">TV9 Bangla</a>
+        <a href="https://www.anandabazar.com/" target="contentFrame">Ananda Bazar</a>
+        <a href="https://bengali.abplive.com/news" target="contentFrame">ABP Live Bengali</a>
+        <a href="https://eisamay.com/" target="contentFrame">Ei Samay</a>
+        <a href="https://www.sangbadpratidin.in/" target="contentFrame">Sangbad Pratidin</a>
+        <a href="https://bangla.aajtak.in/" target="contentFrame">Aaj Tak Bangla</a>
+        <a href="https://bangla.republicworld.com/" target="contentFrame">Republic World Bangla</a>
+        <a href="https://zeenews.india.com/bengali" target="contentFrame">Zee News Bengali</a>
+        <a href="https://www.aajkaal.in/" target="contentFrame">Aaj Kaal</a>
+        <a href="https://bengali.oneindia.com/" target="contentFrame">One India Bengali</a>
+        <a href="https://banglahunt.com/" target="contentFrame">Bangla Hunt</a>
+        <a href="https://www.thewall.in/" target="contentFrame">The Wall</a>
+        <a href="https://www.etvbharat.com/bn/west-bengal" target="contentFrame">ETV Bharat West Bengal</a>
+        <a href="https://bengali.timesnownews.com/" target="contentFrame">Times Now Bengali</a>
+        <a href="https://bengali.economictimes.com/" target="contentFrame">Economic Times Bengali</a>
+        <a href="https://www.jugantor.com/international" target="contentFrame">Jugantor International</a>
+        <a href="https://kolkata24x7.in/" target="contentFrame">Kolkata 24x7</a>
+        <a href="https://www.skillbangla.in/p/karmasangsthan.html" target="contentFrame">Karmasangsthan PDF Download</a>
+        <h3>Bangladesh News</h3>
+        <a href="https://www.prothomalo.com/" target="contentFrame">Prothom Alo</a>
+        <a href="https://www.newsbangla24.com/" target="contentFrame">News Bangla 24</a>
+        <a href="https://www.banglanews24.com/" target="contentFrame">Bangla News 24</a>
+        <a href="https://www.bbc.com/bengali" target="contentFrame">BBC Bengali</a>
+        <a href="https://www.voabangla.com/" target="contentFrame">VOA Bangla</a>
+        <a href="https://www.dw.com/bn/%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%9F/s-11929" target="contentFrame">DW Bengali</a>
+    </div>
+    <div id="content">
+        <iframe name="contentFrame" src=""></iframe>
+    </div>
+    <button id="toggleButton">Toggle Sidebar</button>
+
+    <script>
+        document.querySelectorAll('#sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('sidebar').classList.add('shrink');
+                document.getElementById('content').classList.add('expanded');
+                document.getElementById('toggleButton').classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('toggleButton').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('shrink');
+            document.getElementById('content').classList.toggle('expanded');
+            document.getElementById('toggleButton').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+web stories (AMP) - pages are nearly done, just fix the layout.
+
+make fb page, twitter, insta, whatsapp group, telegram group
+
+source rss notifier(not found good solution), made a panel instead using chatGPT

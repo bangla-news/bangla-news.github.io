@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            margin: 10px 0;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            /*resize: none;*/
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .input-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            input[type="text"] {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            button {
+                border-radius: 4px;
+            }
+            
+            textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size:15px;">Content Extractor</h1>
+    <div class="input-container">
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button id="fetchButton">Fetch and Extract</button>
+    </div>
+    
+    <textarea id="titleText"  placeholder="Title"></textarea>
+    
+    <textarea id="contentText" placeholder="Content"  rows="15"></textarea>
+    <button id="copyButton">Copy to Clipboard</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/readability/0.4.4/Readability.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
